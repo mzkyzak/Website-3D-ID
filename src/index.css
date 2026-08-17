@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --color-merah: #cc0001;
+  --color-putih: #ffffff;
+  --color-gold: #c9a84c;
+  --color-gold-light: #f5d78e;
+  --color-dark: #06050a;
+  --color-dark-mid: #100e18;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-dark);
+  color: var(--color-putih);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Confetti canvas (canvas-confetti lib) must not block UI clicks */
+body > canvas {
+  pointer-events: none !important;
+}
+
+/* Smooth scene transitions */
+.scene-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.scene-layer.interactive {
+  pointer-events: auto;
+}
+
+/* Custom scrollbar hidden */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+/* Utility: screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

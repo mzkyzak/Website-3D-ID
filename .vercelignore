@@ -1,0 +1,8 @@
+node_modules
+build
+.git
+.env*
+*.log
+*.rar
+public/*.rar
+public/frames1
