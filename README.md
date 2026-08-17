@@ -135,8 +135,8 @@ src/
 
 ```bash
 # Clone repository
-git clone https://github.com/mzkyzak/birthday_indonesia_81.git
-cd birthday_indonesia_81
+git clone https://github.com/mzkyzak/Website-3D-ID.git
+cd Website-3D-ID
 
 # Install dependencies
 npm install
