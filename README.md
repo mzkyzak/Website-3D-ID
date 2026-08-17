@@ -153,18 +153,6 @@ npm run build
 
 ---
 
-## 🔥 Deploy ke Firebase Hosting
-
-### 1. Login Firebase
-```bash
-npx firebase-tools login
-```
-
-### 2. Deploy
-```bash
-npx firebase-tools deploy
-```
-
 ### 3. Firestore Security Rules
 Buka Firebase Console → Firestore → Rules dan paste:
 
