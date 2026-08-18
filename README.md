@@ -153,31 +153,6 @@ npm start
 ```bash
 npm run build
 ```
-
----
-
-### 3. Firestore Security Rules
-Buka Firebase Console → Firestore → Rules dan paste:
-
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /messages/{messageId} {
-      allow read: if true;
-      allow create: if request.auth != null
-                   && request.resource.data.name is string
-                   && request.resource.data.name.size() > 0
-                   && request.resource.data.message is string
-                   && request.resource.data.message.size() > 0
-                   && request.resource.data.uid == request.auth.uid
-                   && request.resource.data.createdAt != null;
-      allow update, delete: if false;
-    }
-  }
-}
-```
-
 ---
 
 ## 💾 Keamanan & Skalabilitas Data
